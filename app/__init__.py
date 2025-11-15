@@ -25,7 +25,4 @@ def create_app():
     for bp in list_bp:
         app.register_blueprint(bp)
     
-    with app.app_context():
-        db.create_all()
-    
     return app
